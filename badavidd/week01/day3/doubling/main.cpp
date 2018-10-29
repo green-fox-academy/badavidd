@@ -16,6 +16,7 @@ int main(int argc, char* args[]) {
     return 0;
 }
 
+
 void doubling(int x)
 {
     std::cout << x * 2 << std::endl;
