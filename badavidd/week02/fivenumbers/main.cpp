@@ -15,7 +15,7 @@ int main()
     }
     for(int j = 0; j < 5; j++){
         aPtr = &a[j];
-        std::cout << *aPtr << std::endl;
+        std::cout << *aPtr << " ";
     }
     return 0;
 }
