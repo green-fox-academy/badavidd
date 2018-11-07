@@ -23,22 +23,21 @@ SDL_Renderer* gRenderer = nullptr;
 void draw()
 {
     // Reproduce this:
-    // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
+    // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
     // Pay attention for the outlines as well
 
-    int x = 50;
-    int y = 50;
-    int size = 15;
-    for(int i = 0; i < 18; i++){
+    int x = 30;
+    int y = 30;
+    int size = 20;
+    for(int i = 1; i < 7; i++){
         SDL_SetRenderDrawColor(gRenderer, 0x94, 0x00, 0xD3, 0xFF);
-        SDL_Rect fillRect = {x, y, size, size};
+        SDL_Rect fillRect = {x, y, size * i, size * i};
         SDL_RenderFillRect(gRenderer, &fillRect);
         SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
         SDL_RenderDrawRect(gRenderer, &fillRect);
-        x += 15;
-        y += 15;
+        x += size * i;
+        y += size * i;
     }
-
 
 }
 
@@ -52,7 +51,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Purple steps", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Purple steps 3D", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
