@@ -28,22 +28,21 @@ void draw() {
 
     int x = 0;
     int y = 0;
+    SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
     for (int i = 0; i < SCREEN_HEIGHT / 20 + 1; i++) {
-            SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
-            SDL_RenderDrawLine(gRenderer, x, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-            SDL_RenderDrawLine(gRenderer, x + 640, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+        SDL_RenderDrawLine(gRenderer, x, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+        SDL_RenderDrawLine(gRenderer, SCREEN_WIDTH, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
         if (y == 480) {
             for (int j = 0; j < SCREEN_WIDTH / 20; j++) {
                 x += 20;
                 SDL_RenderDrawLine(gRenderer, x, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-                SDL_RenderDrawLine(gRenderer, x, y - 480, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+                SDL_RenderDrawLine(gRenderer, x, 0, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
             }
         }
         y += 20;
     }
 
 }
-
 
 bool init() {
     //Initialize SDL
