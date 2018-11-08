@@ -22,11 +22,6 @@ SDL_Window *gWindow = nullptr;
 //The window renderer
 SDL_Renderer *gRenderer = nullptr;
 
-//void drawLine(SDL_Renderer *renderer, double distance, double angle_in_degree, double cx=SCREEN_WIDTH / 2, double cy=SCREEN_HEIGHT / 2) {
-  //  double x, y;
-   // y += cy + distance * sin(angle_in_degree * 3.14 / 180);
-    //x += cx + distance * cos(angle_in_degree * 3.14 / 180);
-    //SDL_RenderDrawLine(renderer, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, x, y);
 
 void draw()
 {
