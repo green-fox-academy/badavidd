@@ -22,16 +22,16 @@ SDL_Window *gWindow = nullptr;
 SDL_Renderer *gRenderer = nullptr;
 
 void draw() {
-    int a = SCREEN_WIDTH / 16;
-    int k = 0;
-    int x = SCREEN_WIDTH;
-    int y = SCREEN_HEIGHT;
-    for (int j = x; j > 0; j -= a) {
-        for (int i = k; i < y; i += a) {
-            trigonRGBA(gRenderer, i +  a / 2, j - a, i, j, i + a, j, 0x00, 0x00, 0x00, 0xFF);
+    int size = SCREEN_WIDTH / 16;
+    int left = 0;
+    int width = SCREEN_WIDTH;
+    int right = SCREEN_HEIGHT;
+    for (int j = width; j > 0; j -= size) { //Sor ugrás
+        for (int i = left; i < right; i += size) { //Háromszögek egy sorban
+            trigonRGBA(gRenderer, i +  size / 2, j - size, i, j, i + size, j, 0x00, 0x00, 0x00, 0xFF);
         }
-        k += a / 2;
-        y -= a / 2;
+        left += size / 2;
+        right -= size / 2;
     }
 }
 
