@@ -22,7 +22,7 @@ SDL_Window *gWindow = nullptr;
 SDL_Renderer *gRenderer = nullptr;
 
 void draw() {
-    int a = 40;
+    int a = SCREEN_WIDTH / 16;
     int k = 0;
     int x = SCREEN_WIDTH;
     int y = SCREEN_HEIGHT;
