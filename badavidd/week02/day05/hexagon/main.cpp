@@ -24,12 +24,11 @@ SDL_Window *gWindow = nullptr;
 SDL_Renderer *gRenderer = nullptr;
 
 void draw() {
-    Sint16 a[] = {320, 340, 351, 340, 320, 309};
+    Sint16 a[] = {320, 340, 350, 340, 320, 310};
     Sint16 b[] = {11, 11, 30, 49, 49, 30};
 
     Sint16 *aPtr = a;
     Sint16 *bPtr = b;
-    polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
     for (int j = 0; j < 6; j++) {
         for (int i = 0; i < 6; i++) {
             b[i] = b[i] + 38;
@@ -39,21 +38,89 @@ void draw() {
         polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
 
     }
-    for(int r = 0; r < 6; r++) {
-        a[r] = a[r] - 39;
-    }
-//MARADÉKOS OSZTÁSSAL a 3. és 6. pontnak más az eltolása mint a többinek
-    for (int j = 0; j < 6; j++) {
-
-        for (int i = 0; i < 6; i++) {
-            b[i] = b[i] - 19;
+    for (int r = 0; r < 6; r++) {
+        if (r == 2) {
+            a[r] = a[r] - 31;
+        } else if (r == 5) {
+            a[r] = a[r] - 27;
+        } else {
+            a[r] = a[r] - 29;
         }
-        aPtr = a;
-        bPtr = b;
-        polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+    }
 
+    for (int j = 0; j < 5; j++) {
+        if (j == 0) {
+            for (int i = 0; i < 6; i++)
+                if (j == 0) {
+                    b[i] = b[i] - 19;
+                }
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        } else {
+            for (int i = 0; i < 6; i++)
+                b[i] = b[i] - 38;
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        }
+    }
+    for (int r = 0; r < 6; r++) {
+        if (r == 2) {
+            a[r] = a[r] - 29;
+        } else if (r == 5) {
+            a[r] = a[r] - 30;
+        } else {
+            a[r] = a[r] - 29;
+        }
+    }
+
+    for (int j = 0; j < 4; j++) {
+        if (j == 0) {
+            for (int i = 0; i < 6; i++)
+                if (j == 0) {
+                    b[i] = b[i] + 19;
+                }
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        } else {
+            for (int i = 0; i < 6; i++)
+                b[i] = b[i] + 38;
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        }
+    }
+    for (int r = 0; r < 6; r++) {
+        if (r == 2) {
+            a[r] = a[r] - 27;
+        } else if (r == 5) {
+            a[r] = a[r] - 30;
+        } else {
+            a[r] = a[r] - 29;
+        }
+    }
+
+    for (int j = 0; j < 3; j++) {
+        if (j == 0) {
+            for (int i = 0; i < 6; i++)
+                if (j == 0) {
+                    b[i] = b[i] - 19;
+                }
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        } else {
+            for (int i = 0; i < 6; i++)
+                b[i] = b[i] - 38;
+            aPtr = a;
+            bPtr = b;
+            polygonRGBA(gRenderer, aPtr, bPtr, 6, 0x00, 0x00, 0x00, 0xFF);
+        }
     }
 }
+
 
 /*
  *  for (int k = 0; k < 1; k++) {
