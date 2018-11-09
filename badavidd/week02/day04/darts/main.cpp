@@ -35,7 +35,7 @@ void draw()
     circleRGBA(gRenderer, SCREEN_WIDTH /2, SCREEN_HEIGHT /2, 145, 0x00, 0x00, 0x00, 0xFF);
     float y2 = 0;
     float x2 = 0;
-    float i = 100;
+    float i = 0;
     y2 = static_cast<float>(SCREEN_HEIGHT / 2 - 300) * (cos(i * (M_PI / 180))) - (SCREEN_WIDTH / 2) * (sin(i * (M_PI / 180)));
     x2 = static_cast<float>(SCREEN_HEIGHT / 2 - 300) * (sin(i * (M_PI / 180))) + (SCREEN_WIDTH / 2) * (cos(i * (M_PI / 180)));
     SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
