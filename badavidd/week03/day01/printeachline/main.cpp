@@ -20,5 +20,6 @@ int main() {
     while (getline(file, text)) {
         std::cout << text << std::endl;
     }
+    file.close();
     return 0;
 }

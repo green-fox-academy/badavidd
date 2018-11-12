@@ -13,6 +13,6 @@ int main() {
     } else {
         std::cout << ":(" << std::endl;
     }
-
+    name.close();
     return 0;
 }

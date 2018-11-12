@@ -23,5 +23,6 @@ int countLine(std::string filename)
     }else {
         return 0;
     }
+    myFile.close();
 return counter;
 }

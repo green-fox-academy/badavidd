@@ -28,5 +28,7 @@ bool copy(std::string file, std::string newfile) {
     } else {
         return false;
     }
+    file2.close();
+    newfile2.close();
     return true;
 }

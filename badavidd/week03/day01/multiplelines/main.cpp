@@ -30,4 +30,6 @@ int apple(std::string path, std::string word, int number) {
     } else {
         std::cout << "Cant open file :(" << std::endl;
     }
+    file.close();
+    return 0;
 }
