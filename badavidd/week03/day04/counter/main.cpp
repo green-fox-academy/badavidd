@@ -9,6 +9,7 @@ int counter(int num) {
     }
 }
 
+
 int main() {
 
     std::cout << counter(4) << std::endl;
