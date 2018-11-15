@@ -5,7 +5,7 @@
 
 int power(int base, int n)
 {
-    if(base > 0 && n > 1)
+    if(n > 1)
     {
         return base * power(base,n - 1);
     }
@@ -13,7 +13,7 @@ int power(int base, int n)
 
 int main() {
 
-    std::cout << power(2, 6);
+    std::cout << power(0, 6);
 
     return 0;
 }
