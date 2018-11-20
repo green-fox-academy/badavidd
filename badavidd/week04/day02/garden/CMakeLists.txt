@@ -3,4 +3,4 @@ project(garden)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(garden main.cpp)
+add_executable(garden main.cpp plants.cpp plants.h)
