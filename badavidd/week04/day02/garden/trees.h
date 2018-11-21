@@ -1,13 +1,13 @@
 #ifndef GARDEN_TREES_H
 #define GARDEN_TREES_H
 
-#include <iostream>
+#include "plants.h"
 
-class Plants;
 class Trees : public Plants {
 public:
-    Trees(std::string color, int waterLevel);
-    void needWater();
+    Trees(std::string color);
+
+    bool needWater() override;
 
 };
 

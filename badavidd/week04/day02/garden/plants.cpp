@@ -5,6 +5,6 @@ Plants::Plants() {
 
 }
 
-void Plants::needWater() {
+bool Plants::needWater() {
 
 }

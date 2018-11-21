@@ -7,7 +7,7 @@ class Plants {
 public:
     Plants();
 
-    void needWater();
+    virtual bool needWater();
 
 protected:
     std::string _color;
