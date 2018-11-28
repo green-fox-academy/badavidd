@@ -18,7 +18,7 @@ public:
 
     void setHP(int DMG);
 
-    int totalDMG();
+    int getTotalDMG();
 
     void fight(Carrier &carrier);
 
