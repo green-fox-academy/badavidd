@@ -5,15 +5,15 @@ Garden::Garden() {
 }
 
 void Garden::water(int waterAmount) {
-    int _needwater = 0;
+    int needwater = 0;
     for (int i = 0; i < _plants.size(); i++) {
         if (_plants[i]->isNeedWater()) {
-            _needwater++;
+            needwater++;
         }
     }
     for (int j = 0; j < _plants.size(); j++) {
         if (_plants[j]->isNeedWater()) {
-            _plants[j]->water(waterAmount / _needwater);
+            _plants[j]->water(waterAmount / needwater);
         }
     }
 }
