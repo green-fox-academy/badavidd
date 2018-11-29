@@ -1,25 +1,21 @@
 #include "garden.h"
 
-void Garden::water(int waterAmount) {
-    for (int j = 0; j < _plants.size(); j++) {
-        if (_plants[j]->isNeedWater()) {
-            _plants[j]->water(waterAmount / _needwater);
-        }
-    }
+Garden::Garden() {
+
 }
 
-int Garden::needWater() {
-    _needwater = 0;
+void Garden::water(int waterAmount) {
+    int _needwater = 0;
     for (int i = 0; i < _plants.size(); i++) {
         if (_plants[i]->isNeedWater()) {
             _needwater++;
         }
     }
-    return _needwater;
-}
-
-Garden::Garden(){
-
+    for (int j = 0; j < _plants.size(); j++) {
+        if (_plants[j]->isNeedWater()) {
+            _plants[j]->water(waterAmount / _needwater);
+        }
+    }
 }
 
 void Garden::addPlant(Plant *plant) {

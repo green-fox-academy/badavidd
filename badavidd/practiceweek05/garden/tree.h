@@ -1,6 +1,5 @@
 #ifndef GARDEN_TREE_H
 #define GARDEN_TREE_H
-
 #include "plant.h"
 
 class Tree : public Plant {
@@ -14,8 +13,6 @@ public:
     void water(int givenWater) override;
 
     std::string getType();
-
 };
-
 
 #endif

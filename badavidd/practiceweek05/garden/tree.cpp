@@ -5,7 +5,6 @@ Tree::Tree(std::string color, int waterLVL) {
     _waterLVL = waterLVL;
 }
 
-
 float Tree::getWaterLVL() {
     return _waterLVL;
 }

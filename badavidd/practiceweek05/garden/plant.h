@@ -14,12 +14,9 @@ public:
 
     virtual std::string getType() = 0;
 
-
 protected:
     std::string _color;
     float _waterLVL;
-
 };
-
 
 #endif

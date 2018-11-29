@@ -14,9 +14,6 @@ public:
     void water(int givenWater) override;
 
     std::string getType();
-
-
 };
-
 
 #endif

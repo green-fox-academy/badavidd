@@ -1,8 +1,6 @@
 #ifndef GARDEN_GARDEN_H
 #define GARDEN_GARDEN_H
-
 #include <vector>
-#include "plant.h"
 #include "tree.h"
 #include "flower.h"
 
@@ -14,16 +12,8 @@ public:
 
     void water(int waterAmount);
 
-    int needWater();
-
-
-
-private:
-    int _needwater = 0;
-
 private:
     std::vector<Plant *> _plants;
 };
-
 
 #endif
