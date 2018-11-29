@@ -1,11 +1,10 @@
 #ifndef DEVICES_PRINTER_H
 #define DEVICES_PRINTER_H
-
 #include <iostream>
 
 class Printer {
 public:
-    virtual void getSize() = 0;
+    virtual std::string getSize() = 0;
 
     void print();
 };

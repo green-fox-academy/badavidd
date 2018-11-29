@@ -6,5 +6,5 @@ Printer2d::Printer2d(int sizeX, int sizeY) {
 }
 
 std::string Printer2d::getSize() {
-return std::to_string(_sizeX) + " X " + std::to_string(_sizeY);
+    return std::to_string(_sizeX) + "x" + std::to_string(_sizeY);
 }

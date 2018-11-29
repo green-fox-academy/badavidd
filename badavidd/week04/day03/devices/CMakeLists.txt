@@ -3,4 +3,4 @@ project(devices)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(devices main.cpp scanner.cpp scanner.h printer.cpp printer.h printer2d.cpp printer2d.h)
+add_executable(devices main.cpp scanner.cpp scanner.h printer.cpp printer.h printer2d.cpp printer2d.h printer3d.cpp printer3d.h copier.cpp copier.h)

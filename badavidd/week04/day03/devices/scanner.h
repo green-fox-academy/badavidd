@@ -1,7 +1,7 @@
 #ifndef DEVICES_SCANNER_H
 #define DEVICES_SCANNER_H
-
 #include <iostream>
+#include <vector>
 
 class Scanner {
 public:
@@ -9,7 +9,9 @@ public:
 
     void scan();
 
-private:
+    int getSpeed();
+
+protected:
     int _speed;
 };
 
