@@ -57,7 +57,7 @@ void Carrier::getStatus() {
 
 void Carrier::fight(Carrier &carrier) {
     std::cout << "Fight!" << std::endl;
-    for(int i = 0; i < _aircrafts.size(); i++) {
+    for (int i = 0; i < _aircrafts.size(); i++) {
         carrier.setHP(_aircrafts[i]->fight());
     }
     if (carrier.getHP() <= 0) {
