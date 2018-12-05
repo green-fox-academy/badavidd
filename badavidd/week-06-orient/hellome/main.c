@@ -18,5 +18,7 @@ int main()
     float height = 1.86;
     printf("%s %d %.2f", name, age, height);
 
+
+
     return 0;
 }
