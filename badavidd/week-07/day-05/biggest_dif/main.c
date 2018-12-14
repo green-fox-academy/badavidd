@@ -16,7 +16,7 @@
 // What is the average of all the exams?
 
 void class_creation(int* student_count, int number_of_classes, char** class_names);
-void free_all(int* student_count, int number_of_classes);
+void free_all(int* student_count, char** class_names);
 
 int main()
 {
@@ -32,7 +32,7 @@ int main()
         printf("Name: %s\n", *class_names);
     }
 
-    free_all(student_count, number_of_classes);
+    free_all(student_count, class_names);
     return 0;
 }
 
@@ -49,7 +49,8 @@ void class_creation(int* student_count, int number_of_classes, char** class_name
     }
 }
 
-void free_all(int *student_count, int number_of_classes) {
+void free_all(int *student_count, char** class_names) {
     free(student_count);
+    free(class_names);
 }
 
